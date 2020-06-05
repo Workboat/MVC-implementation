@@ -1,4 +1,0 @@
-Code: "25Discount" - Kind: "Percent" - Value: "25" - Minimum: "0" - Valid for: "48" - Start: "2020/04/30 01"
-Code: "100OFF" - Kind:"Amount" - Value:"100" - Minimum: "26" - Valid for: "7200" - Start:"2020/04/30 01"
-Code: "10OFF" - Kind:"Amount" - Value:"10" - Minimum: "11" - Valid for: "one" - Start:"2020/04/30 01"
-Code: "MOREMOR" - Kind:"Amount" - Value:"20" - Minimum: "26" - Valid for: "120" - Start:"2001/03/10 17"
