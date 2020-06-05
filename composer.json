@@ -1,0 +1,10 @@
+{
+  "require": {
+    "square/connect": "^3.20200325",
+    "vlucas/phpdotenv": "^3.3",
+    "simplehtmldom/simplehtmldom": "2.0-RC2"
+  },
+  "autoload": {
+      "classmap" : ["classes/"]
+  }
+}

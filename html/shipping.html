@@ -1,0 +1,59 @@
+<div class="row dmform-wrapper">
+    <p class="dmNewParagraph free-text" style="text-align:center;">
+      Some fine text
+    </p>
+    <form method="post" id="shipping-form" class="dmRespDesignRow row form-to-process">
+        <div class="dmforminput small-12 dmRespDesignCol medium-1 large-6">
+            <label class="large-6 dmRespDesignCol" for="full-name">Full name:</label>
+            <input class="large-6 dmRespDesignCol mandatory" type="text" name="full-name">
+        </div>
+        <div class="dmforminput small-12 dmRespDesignCol medium-1 large-6">
+            <label class="large-6 dmRespDesignCol" for="address1">Address Line 1: (or company name):</label>
+            <input class="large-6 dmRespDesignCol mandatory" type="text" name="address1">
+        </div>
+        <div class="dmforminput required small-12 dmRespDesignCol medium-2 large-6">
+            <label class="large-6 dmRespDesignCol" for="address2">Address Line 2: (optional)</label>
+            <input class="large-6 dmRespDesignCol" type="text" name="address2">
+        </div>
+        <div class="dmforminput required small-12 dmRespDesignCol medium-2 large-6">
+            <label class="large-6 dmRespDesignCol" for="unit">Unit/Suit/Apt/Gate Code:</label>
+            <input class="large-6 dmRespDesignCol mandatory" type="text" name="unit">
+        </div>
+        <div class="dmforminput dmRespDesignCol medium-3 small-6  large-6">
+            <label class="large-6 dmRespDesignCol" for="city">City:</label>
+            <input class="large-6 dmRespDesignCol mandatory" type="text" name="city">
+        </div>
+        <div class="dmforminput dmRespDesignCol medium-3  small-6 large-6">
+            <label class="large-6 dmRespDesignCol" for="state">State/Province/Region:</label>
+            <input class="large-6 dmRespDesignCol mandatory" type="text" name="state">
+        </div>
+        <div class="dmforminput dmRespDesignCol medium-3 small-6 large-6">
+            <label class="large-6 dmRespDesignCol" for="postal">Postal Code:</label>
+            <input class="large-6 dmRespDesignCol mandatory" type="text" name="postal">
+        </div>
+        <div style="margin-bottom: 20px;" class="dmforminput large-12 medium-12 dmRespDesignCol">
+            <label for="additional-message">Instructions/Additional messages:</label>
+            <textarea name="additional-message"></textarea>
+        </div>
+        <div class="hidden-container">
+            <!-- input type="hidden" id="PageUrl" -->
+            <input type="hidden" id="tax"                  name="tax"             value="{tax}">
+            <input type="hidden" id="shipping"             name="shipping"        value="{shipping}">
+            <input type="hidden" id="coupon-type"          name="coupon-type"     value="{coupon-type}">
+            <input type="hidden" id="price-per-foot"       name="price-per-foot"  value="{price-per-foot}">
+            <input type="hidden" id="installation-price"   name="installation"    value="{installation}">
+        </div>
+
+        <div class="dmforminput large-12 medium-12 dmRespDesignCol">
+            <div class="dmformsubmit dmWidget" style="text-align: center; margin: 0 auto; display: table;" preserve_css="true">
+                <input class="" name="submit" type="submit" onclick="processForm('select-payment'); return false;" value="Pay {summ} CAD">
+            </div>
+        </div>
+        <div class="payment-details large-12 medium-12 dmRespDesignCol">
+            Wallpaper product: {summ}
+            Shipping: {shipping}
+            Taxes: {taxes-summ}
+            Total: {total}
+        </div>
+    </form>
+</div>

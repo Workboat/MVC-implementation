@@ -1,0 +1,9 @@
+deny from All
+#Options +FollowSymLinks
+#RewriteEngine On
+#RewriteRule ^([a-z-]*)$ router.php?page=$1 [QSA,L]
+#RewriteRule ^([a-z-]*)\/([0-9]+)$ index.php?page=$1&item=$2 [QSA,L]
+#RewriteRule . router.php?page=404 [QSA,L]
+#RewriteCond ^pay\.php off
+#RewriteCond ^process-card\.php off
+#RewriteCond ^price\.txt off

@@ -1,0 +1,39 @@
+.free-text {
+   text-align: center;
+   font-weight: 400;
+   font-size: 16px;
+   color: rgb(255, 255, 255);
+}
+
+.set-my-pad {
+  margin-top: 7px;
+  color: rgba(255,255,255,1);
+  display: inline-block;
+  font-size: 14px;
+}
+
+.inputError {
+    border: 1px solid red!important;
+}
+
+.question-button {
+   display: inline-block;
+   background-color: rgb(238, 78, 154);
+   font-family:Poppins;
+   color: white!important;
+   font-size: 16px;
+   font-weight: 400;
+   border-radius: 50px;
+   line-height: 48px;
+   margin-top: 15px;
+   cursor: pointer;
+ }
+.question-button:hover { background-color: rgb(170, 56, 113); }
+
+.payment-details {
+    font-weight: bold;
+}
+
+.code-message {
+    font-size: 11px;
+}

@@ -1,0 +1,65 @@
+<p class="dmNewParagraph free-text" style="text-align:center;">
+  All of our high quality wallpapers are only $6 per Square Foot. You have the option to choose a professional
+  installation service for only $3 per Square Foot. We will contact you to setup an installation date and
+  time that matches you when we receive your order.
+</p>
+<form method="post" id="order-form" class="dmRespDesignRow form-to-process">
+    <div class="dmforminput small-12 dmRespDesignCol medium-1 large-2">
+      <label for="name">Name:</label>
+      <input type="text" name="name" class="mandatory" maxlength="128">
+    </div>
+    <div class="dmforminput small-12 dmRespDesignCol medium-1 large-2">
+      <label for="last-name">Last name:</label>
+      <input type="text" name="last-name" maxlength="128">
+    </div>
+    <div class="dmforminput required small-12 dmRespDesignCol medium-2 large-2">
+      <label for="phone">Phone:</label>
+      <input type="text" name="phone" class="mandatory" maxlength="20">
+    </div>
+    <div class="dmforminput required small-12 dmRespDesignCol medium-2 large-2">
+      <label for="email">Email:</label>
+      <input type="email" name="email" maxlength="128">
+    </div>
+    <div class="dmforminput dmRespDesignCol medium-3 large-2 small-6">
+      <label for="size1">Width</label>
+      <input type="number" class="set-my-width" id="size1" name="size1" onchange="CustomGallery.processSize(this)" min="5" max="999">
+    </div>
+    <div class="dmforminput dmRespDesignCol medium-3 large-2 small-6">
+      <label for="size2">Height</label>
+      <input type="number" class="set-my-width" id="size2" name="size2" onchange="CustomGallery.processSize(this)" min="5" max="999">
+    </div>
+    <div style="margin-bottom: 20px;" class="dmforminput large-12 medium-12 dmRespDesignCol">
+      <label for="message">Message:</label>
+      <textarea name="message" maxlength="2048"></textarea>
+    </div>
+    <div class="dmforminput small-12 dmRespDesignCol medium-1 large-2">
+      <label for="last-name">Coupon:</label>
+      <input type="text" id="coupon" name="coupon" onmouseup="CustomGallery.calculatePrice()" onkeyup="CustomGallery.calculatePrice()" maxlength="128">
+      <span class="code-message"></<span>
+    </div>
+    <div style="margin-bottom: 20px;" class="dmforminput small-12 large-4 medium-4 dmRespDesignCol">
+      <label for="installation">Add installation:</label>
+      <input type="checkbox" id="installation" name="installation" onclick="CustomGallery.calculatePrice()">
+    </div>
+    <input type="hidden" id="PageUrl">
+    <input type="hidden" id="tax"                  name="tax"             value="{tax}">
+    <input type="hidden" id="shipping"             name="shipping"        value="{shipping}">
+    <input type="hidden" id="coupon-type"          name="coupon-type"     value="{coupon-type}">
+    <input type="hidden" id="price-per-foot"       name="price-per-foot"  value="{price}">
+    <input type="hidden" id="installation-price"   name="installation"    value="{installation}">
+    <div>
+      <div class="dmformsubmit dmWidget" preserve_css="true">
+        <input class="" name="submit" type="submit" onclick="CustomGallery.processForm('form', 'shipping'); return false" value="Select size to buy">
+      </div>
+    </div>
+    <div style="text-align: center;">
+      <span style="" class="lh-1 font-size-20">
+       <font style="color: rgb(255, 255, 255);">Have a question?</font>
+      </span>
+    </div>
+    <div style="text-align: center;">
+      <a class="question-button dmformsubmit" onclick="processForm('email', 'send-message'); return false">
+        Send a message
+      </a>
+    </div>
+</form>
