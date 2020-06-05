@@ -1,0 +1,1 @@
+Code: "Example" - Kind: "Percent" - Value: "25" - Minimum: "0" - Valid for: "hh" - Start: "yyyy/mm/dd hh"
