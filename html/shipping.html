@@ -38,6 +38,7 @@
         <div class="hidden-container">
             <!-- input type="hidden" id="PageUrl" -->
             <input type="hidden" id="tax"                  name="tax"             value="{tax}">
+            <input type="hidden" id="summ"                 name="summ"            value="{summ}">
             <input type="hidden" id="shipping"             name="shipping"        value="{shipping}">
             <input type="hidden" id="coupon-type"          name="coupon-type"     value="{coupon-type}">
             <input type="hidden" id="price-per-foot"       name="price-per-foot"  value="{price-per-foot}">
@@ -46,7 +47,7 @@
 
         <div class="dmforminput large-12 medium-12 dmRespDesignCol">
             <div class="dmformsubmit dmWidget" style="text-align: center; margin: 0 auto; display: table;" preserve_css="true">
-                <input class="" name="submit" type="submit" onclick="processForm('select-payment'); return false;" value="Pay {summ} CAD">
+                <input class="" name="submit" type="submit" onclick="processForm('select-payment'); return false;" value="Pay {total} CAD">
             </div>
         </div>
         <div class="payment-details large-12 medium-12 dmRespDesignCol">

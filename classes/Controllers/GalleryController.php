@@ -1,14 +1,13 @@
 <?php
 class GalleryController extends Controller {
-    
     /**
     * Get and process page data
     * @param array arguments from query string
     */
-    public function pageAction($query)
+    public function pageAction()
     {
-        if (!empty($query['page'])) {
-            $page   = $query['page'];
+        if (!empty($this->params['page'])) {
+            $page   = $this->params['page'];
             $path   = '/' . $page;
             $html   = $this->model->getPage($path);
             $this->getResult($html);
@@ -20,13 +19,12 @@ class GalleryController extends Controller {
     
     /**
     * Get and process specific gallery item data
-    * @param array arguments from query string
     */
-    public function itemAction($query)
+    public function itemAction()
     {
-        if (!empty($query['page']) && !empty($query['item'])) {
-            $page = $query['page'];
-            $item = $query['item'];
+        if (!empty($this->params['page']) && !empty($this->params['item'])) {
+            $page = $this->params['page'];
+            $item = $this->params['item'];
             $path = '/'.$page.'/'.$item;
             $html = $this->model->getItem($path);
             $this->getResult($html);

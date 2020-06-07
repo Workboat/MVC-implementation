@@ -8,7 +8,14 @@ class FormController extends Controller
     */
     public function shippingAction()
     {
-        $html = $this->loadView($_POST);
+        $summ     = $this->params['summ'];
+        $tax      = $this->params['tax'];
+        $taxSumm  = round($summ * $tax, 2);
+        $shipping = $this->params['shipping'];
+        $total    = $taxSumm + $shipping;
+        $params   = array_merge($_POST, ['total' => $total,
+                                         'taxes-summ' => $taxSumm]);
+        $html     = $this->loadView($params);
         $this->getResult($html);
     }
     

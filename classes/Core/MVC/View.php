@@ -27,7 +27,7 @@ class View
                     $keyArr[] = '{' . $key . '}';
                     $valArr[] = $value;
                 }
-                echo "key = $key   |  value = $value </br>";
+                // echo "key = $key   |  value = $value </br>";
             }
             $html = str_replace($keyArr, $valArr, $html);
         }

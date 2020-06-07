@@ -8,7 +8,7 @@ class Router {
             $controller = $query['controller'];
             $action     = $query['action'];
             unset($query['controller'], $query['action']);
-            $this->useController($controller, $action, $query);
+            $this->useController($controller, $action);
        }
     }
     
@@ -18,11 +18,11 @@ class Router {
     * @param string $action name of action`
     * @param array $params $_GET arguments
     */
-    private function useController($controller, $action, $params)
+    private function useController($controller, $action)
     {
         $controller     = ucfirst($controller);
         $controllerName = $controller . 'Controller';
-        $controllerObj  = new $controllerName($controller, $action, $params);
+        $controllerObj  = new $controllerName($controller, $action);
     }
 
 }

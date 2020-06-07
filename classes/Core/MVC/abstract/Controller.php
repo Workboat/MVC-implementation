@@ -31,14 +31,15 @@ abstract class Controller
     */
     protected $actionName;
     
-    function __construct($curName, $action, $query)
+    function __construct($curName, $action)
     {
         $this->selfName   = $curName;
         $this->actionName = $action;
         $curModelName     = $curName . "Model";
         $this->model      = new $curModelName;
-        $this->params     = $this->sanitizer($query);
-        $this->doAction($action, $query);
+        $tmp              = array_merge($_GET, $_POST);
+        $this->params     = $this->sanitizer($tmp);
+        $this->doAction($action);
     }
     
     /**
@@ -47,9 +48,9 @@ abstract class Controller
     * empty page
     * @param array $query query string params except action
     */
-    private function doAction($action, $query) {
+    private function doAction($action) {
         $action .= 'Action';
-        $this->$action($query);
+        $this->$action();
     }
     
     /**

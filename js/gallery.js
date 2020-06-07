@@ -40,9 +40,12 @@ class Gallery {
   }
   
   displaySumm (summ) {
-    if (summ !== 0 && !isNaN(summ) && summ >= 5) $("input[type='submit']").val('Pay $' + summ + ' CAD')
-    //else if (summ == 0) $("input[type='submit']").val('Select size to buy')
-    else if (summ < 5) $("input[type='submit']").val('Minimum amount is $5 CAD')
+    let value
+    if (summ !== 0 && !isNaN(summ) && summ >= 5) value = 'Pay $' + summ + ' CAD'
+    else if (summ < 5 && summ !== 0) value = 'Minimum amount is $5 CAD'
+    else if (summ == 0) value = 'Select size to buy'
+    $('#summ').val(summ)
+    $("input[type='submit']").val(value)
   }
 
   checkCoupon (code, summ) {
