@@ -33,13 +33,4 @@ class View
         }
         return $html;
     }
-    
-    /**
-    * Pass parameters from the pervious form
-    * @param array
-    */
-    /*static function createHiddenFields($fields = is_null){
-        echo "Static from abstarct class";
-        die();
-    }*/
 }
